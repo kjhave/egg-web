@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# EGG Club website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proof-of-concept website for the EGG Club.
+
+## Features
+
+News, events, and accomplishments of the EGG Club.
+
+Members management.
+
+* Add, edit, and remove members.
+* Search members
+* "Humans of EGG"
+
+## Technologies
+* React, tailwindcss,...
 
 ## Available Scripts
 
@@ -21,7 +34,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
