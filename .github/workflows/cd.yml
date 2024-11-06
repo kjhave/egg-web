@@ -1,32 +1,35 @@
-   name: Deploy React App to GitHub Pages
+name: Deploy React App to GitHub Pages
 
-   on:
-     push:
-       branches:
-         - main  # Thay 'main' bằng tên nhánh chính của bạn nếu khác
+on:
+ push:
+   branches:
+     - main
 
-   jobs:
-     build-and-deploy:
-       runs-on: ubuntu-latest
+permissions:
+  contents: write
 
-       steps:
-         - name: Checkout code
-           uses: actions/checkout@v4
+jobs:
+ build-and-deploy:
+   runs-on: ubuntu-latest
 
-         - name: Set up Node.js
-           uses: actions/setup-node@v3
-           with:
-             node-version: '20'
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v4
 
-         - name: Install dependencies
-           run: npm install
+     - name: Set up Node.js
+       uses: actions/setup-node@v3
+       with:
+         node-version: '20'
 
-         - name: Build the app
-           run: npm run build
+     - name: Install dependencies
+       run: npm install
 
-         - name: Deploy to GitHub Pages
-           uses: peaceiris/actions-gh-pages@v3
-           with:
-             github_token: ${{ secrets.GITHUB_TOKEN }}
-             publish_dir: ./build
+     - name: Build the app
+       run: npm run build
+
+     - name: Deploy to GitHub Pages
+       uses: peaceiris/actions-gh-pages@v3
+       with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./build
 
