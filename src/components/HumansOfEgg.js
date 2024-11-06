@@ -3,7 +3,7 @@ import React from 'react';
 function HumansOfEgg() {
 	return (
 		<section className="w-4/5 p-5 border-t-2 border-black text-center">
-			<h2 className="text-xl">Humans of EGG</h2>
+			<h2 className="text-xl text-white">Humans of EGG</h2>
 		</section>
 	);
 }

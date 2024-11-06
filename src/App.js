@@ -1,20 +1,17 @@
-import React from 'react';
-import Header from './components/Header';
-import HighlightEvent from './components/HighlightEvent';
-import HumansOfEgg from './components/HumansOfEgg';
+import React            from 'react';
+import Header           from './components/Header';
+import ContentContainer from './components/ContentContainer';
+import Footer           from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <div className="App font-sans">
       <Header />
-      <main className="flex flex-col items-center gap-5 p-5">
-        <HighlightEvent />
-        <HumansOfEgg />
-      </main>
+      <ContentContainer />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
