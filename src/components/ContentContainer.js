@@ -1,13 +1,9 @@
 import React from 'react';
-import HighlightEvent from './HighlightEvent';
-import HumansOfEgg from './HumansOfEgg';
 import Events from './Events';
 
 function ContentContainer(){
     return (
-        <div className="flex flex-col items-center p-5 bg-[#18191b] min-h-[960px]">
-            {/* <HighlightEvent />
-            <HumansOfEgg /> */}
+        <div className="flex flex-wrap justify-center gap-y-8 py-8 mt-14 bg-[#18191b] min-h-[960px]">
             <Events />
         </div>
     );
