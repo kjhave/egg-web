@@ -1,70 +1,64 @@
 import React from "react";
 
-const members = [
+let members = [
     {
         id: 1,
-        name: "John Doe",
-        role: "Software Engineer",
-        imageUrl: "https://example.com/john.jpg",
-        description: "John has been with the company for 5 years...",
+        name: "Đặng Duy Cương",
+        role: "Chủ nhiệm CLB",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 2,
-        name: "Jane Smith",
-        role: "Product Manager",
-        imageUrl: "https://example.com/jane.jpg",
-        description: "Jane is leading the team on the new product launch...",
+        name: "Nguyễn Tuấn Đạt",
+        role: "Phó chủ nhiệm",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 3,
-        name: "Alice Johnson",
-        role: "UX/UI Designer",
-        imageUrl: "https://example.com/alice.jpg",
-        description:
-            "Alice is focused on improving user experience for our products...",
+        name: "Trần Văn Quang",
+        role: "Trưởng ban Truyền thông",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 4,
-        name: "Bob Lee",
-        role: "Backend Developer",
-        imageUrl: "https://example.com/bob.jpg",
-        description:
-            "Bob has been working on optimizing our backend systems...",
+        name: "Vũ Mạnh Cường",
+        role: "Phó ban Truyền thông",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 5,
-        name: "Emma Brown",
-        role: "Marketing Specialist",
-        imageUrl: "https://example.com/emma.jpg",
-        description:
-            "Emma has extensive experience in marketing strategies and brand building...",
+        name: "Nguyễn Hoàng Việt",
+        role: "Trưởng ban Giáo dục",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 6,
-        name: "Michael Green",
-        role: "Data Scientist",
-        imageUrl: "https://example.com/michael.jpg",
-        description:
-            "Michael specializes in data analysis and machine learning models...",
+        name: "Tạ Tuấn Hải",
+        role: "Phó ban Giáo dục",
+        period: "2023-2024",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 7,
-        name: "Sarah White",
-        role: "Quality Assurance Engineer",
-        imageUrl: "https://example.com/sarah.jpg",
-        description:
-            "Sarah ensures that our products meet the highest quality standards...",
+        name: "Nguyễn Thanh Huyền",
+        role: "Chủ nhiệm CLB",
+        period: "2022-2023",
+        imageUrl: "https://placehold.co/300x200",
     },
     {
         id: 8,
-        name: "David Harris",
-        role: "Sales Director",
-        imageUrl: "https://example.com/david.jpg",
-        description:
-            "David leads the sales team and works on expanding our customer base...",
+        name: "Vũ Hồng Phúc",
+        role: "Chủ nhiệm CLB",
+        period: "2020-2022",
+        imageUrl: "https://placehold.co/300x200",
     },
-    // Add more members as needed
 ];
+
 const HumansOfEgg = () => {
     return (
         <div className="p-8">
@@ -78,7 +72,7 @@ const HumansOfEgg = () => {
                     {members.slice(0, 4).map((member) => (
                         <div
                             key={member.id}
-                            className="flex flex-col items-center w-60 p-4 bg-white shadow-md rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer"
+                            className="flex flex-col items-center w-60 p-4 bg-white shadow-md rounded-lg hover:bg-gray-100 transition-all duration-300 cursor-pointer"
                         >
                             <img
                                 src={member.imageUrl}
@@ -91,7 +85,7 @@ const HumansOfEgg = () => {
                                 </h2>
                                 <p className="text-gray-600">{member.role}</p>
                                 <p className="text-gray-500 text-sm mt-2">
-                                    {member.description}
+                                    {member.period}
                                 </p>
                             </div>
                         </div>
@@ -117,7 +111,7 @@ const HumansOfEgg = () => {
                             </h2>
                             <p className="text-gray-600">{member.role}</p>
                             <p className="text-gray-500 text-sm mt-2">
-                                {member.description}
+                                {member.period}
                             </p>
                         </div>
                     </div>
