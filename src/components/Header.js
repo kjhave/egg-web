@@ -13,11 +13,11 @@ const navList = [
 	},
 	{
 		title:'Thông tin, sự kiện',
-		url:'#'
+		url:'/events'
 	},
 	{
 		title:'Humans of EGG',
-		url:'#'
+		url:'/humansOfEgg'
 	}
 ]
 function Header() {
