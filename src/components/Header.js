@@ -4,16 +4,20 @@ import HeaderNav from './HeaderNav';
 	
 const navList = [
 	{
-		title:'Home'
+		title:'Home',
+		url:'/'
 	},
 	{
-		title:'About EGG'
+		title:'About EGG',
+		url:'/about'
 	},
 	{
-		title:'Thông tin, sự kiện'
+		title:'Thông tin, sự kiện',
+		url:'#'
 	},
 	{
-		title:'Humans of EGG'
+		title:'Humans of EGG',
+		url:'#'
 	}
 ]
 function Header() {
@@ -22,7 +26,7 @@ function Header() {
 			<div className="flex justify-between items-center z-10 h-14 px-4 bg-[#242527]">
 				<img src={eggIcon} alt='EGG' className='w-12 h-12 rounded-full' />
 				<nav className="flex">
-					{navList.map( navItem => <HeaderNav title={navItem.title} /> )}
+					{navList.map( navItem => <HeaderNav title={navItem.title} url={navItem.url} /> )}
 				</nav>
 				<button className="px-4 py-2 border-2 border-black bg-white cursor-pointer">Đăng nhập</button>
 			</div>
