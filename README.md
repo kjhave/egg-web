@@ -15,6 +15,17 @@ Members management.
 ## Technologies
 * React, tailwindcss,...
 
+## Contributors
+
+| Thành viên | Nhiệm vụ |
+|----------|----------|
+| Phạm Bình An | Làm trang About, tạo router, quản lý repo, và merge các pull request|
+|               | Quản lý repo Github, kiểm tra và hợp nhất các pull request|
+| Nguyễn Ngọc Khánh| Thiết kế chung cho website (bao gồm cả header, footer, content container)|
+|                  | Tạo các components liên quan đến Events|
+| Phạm Đức Duy     | Tạo phần Humans of EGG |
+
+
 ## Available Scripts
 
 In the project directory, you can run:
