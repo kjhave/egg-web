@@ -1,10 +1,10 @@
 import React from "react";
-import FAQ from "../components/Faq";
-import ClubSections from "../components/ClubSections";
+import FAQ from "./Faq";
+import ClubSections from "./ClubSections";
 
-function AboutEgg() {
+function AboutEgg( {aboutRef} ) {
 	return (
-		<div className="pt-20 px-8 max-w-4xl mx-auto text-gray-50">
+		<div ref={aboutRef} className="pt-20 px-8 w-[1200px] mx-auto text-gray-50">
 			<h1 className="text-3xl font-bold mb-6">About us</h1>
 
 			<section className="mb-8">

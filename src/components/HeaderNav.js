@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function HeaderNav({ title, url, callback }) {
 	if (callback && typeof (callback) === 'function') {
 		return (
-			<Link to={url} className="text-[#b1b2b6] uppercase hover:cursor-pointer h-12 leading-[48px] px-8" onClick={callback}>{title}</Link>
+			<button className="text-[#b1b2b6] uppercase hover:cursor-pointer h-12 leading-[48px] px-8" onClick={callback}>{title}</button>
 		)
 	}
 	return (

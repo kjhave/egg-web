@@ -10,7 +10,7 @@ function EventSection({ title, eventList }) {
 	return (
 		<div className="flex justify-center content-start flex-wrap flex-grow-0 w-[1200px] px-4 pb-12 shadow-xl bg-[#242527]">
 			<div className="w-full py-8">
-				<h1 className="text-center h-16 w-3/4 p-2 ml-auto mr-auto text-4xl text-white font-bold tracking-widest uppercase border-b-2 border-blue-50">{title}</h1>
+				<h1 className="text-center h-16 w-3/4 p-2 ml-auto mr-auto text-3xl text-white font-bold tracking-widest uppercase border-b-2 border-blue-50">{title}</h1>
 			</div>
 
 			<div className="w-[1072px] overflow-hidden pb-8">
