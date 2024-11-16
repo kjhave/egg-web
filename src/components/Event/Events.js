@@ -1,6 +1,6 @@
 import React from 'react';
 import EventSection from './EventSection';
-import __imgUrl from '../assets/eggIcon.jpg';
+import __imgUrl from '../../assets/eggIcon.jpg';
 
 const EventsList = [
     {
@@ -61,11 +61,11 @@ const EventsList = [
     }
 ];
 
-function Events(){
+function Events( {eventRef} ){
     return(
-        <>
+        <div ref={eventRef}>
             <EventSection title='Sự kiện'   eventList={EventsList}   />
-        </>
+        </div>
     )
 }
 
