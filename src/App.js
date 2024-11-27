@@ -8,16 +8,21 @@ import './App.css';
 import ContentContainer from './components/ContentContainer';
 import HumansOfEgg from './components/humanOfEgg/HumansOfEgg';
 
+const headerSize = 56;
+const paddingContent = 32;
+
 const scrollToRef = function(ref){
-	console.log(ref);
 	if (ref && ref.current){
-		return ref.current.scrollIntoView({
+		return window.scrollTo({
+			top: ref.current.offsetTop - headerSize - paddingContent,
 			behavior: "smooth",
 		});
 	}
 	
-	return window.scrollTo(0, 0, {
+	return window.scrollTo({
+		top: 0,
 		behavior: "smooth",
+		scrollPaddingTop: headerSize + paddingContent
 	});
 }
 
@@ -45,7 +50,7 @@ function App() {
 		<div className="App font-sans min-h-screen flex flex-col">
 			<Header navList={headerNavList} />
 			<main className="flex-grow">
-				<ContentContainer>
+				<ContentContainer scrollFunction={scrollToRef}>
 					<Events eventRef={eventRef}/>
 					<HumansOfEgg humansOfEggRef={humansOfEggRef}/>
 					<AboutUs aboutRef={aboutRef}/>
