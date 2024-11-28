@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import './App.css';
 import ContentContainer from './components/ContentContainer';
 import HumansOfEgg from './components/humanOfEgg/HumansOfEgg';
+import BackToTop from './components/BackToTop';
 
 const headerSize = 56;
 const paddingContent = 32;
@@ -50,13 +51,14 @@ function App() {
 		<div className="App font-sans min-h-screen flex flex-col">
 			<Header navList={headerNavList} />
 			<main className="flex-grow">
-				<ContentContainer scrollFunction={scrollToRef}>
+				<ContentContainer>
 					<Events eventRef={eventRef}/>
 					<HumansOfEgg humansOfEggRef={humansOfEggRef}/>
 					<AboutUs aboutRef={aboutRef}/>
 				</ContentContainer>
 			</main>
 			<Footer />
+			<BackToTop scrollFunction={scrollToRef} />
 		</div>
 	);
 }
