@@ -4,8 +4,8 @@ import EventCard from "./EventCard";
 function EventSection({ title, eventList }) {
 	const [curr, setCurr] = useState(0);
 
-	const prev = () => setCurr(e => curr == 0 ? eventList.length - 1 : curr - 1);
-	const next = () => setCurr(e => curr == eventList.length - 1 ? 0 : curr + 1);
+	const prev = () => setCurr(e => curr === 0 ? eventList.length - 1 : curr - 1);
+	const next = () => setCurr(e => curr === eventList.length - 1 ? 0 : curr + 1);
 
 	return (
 		<div className="flex justify-center content-start flex-wrap flex-grow-0 w-[1200px] px-4 pb-12 shadow-xl bg-[#242527]">

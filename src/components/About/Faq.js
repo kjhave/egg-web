@@ -2,15 +2,15 @@ import React from 'react';
 
 const faqs = [
 	{
-		question: "Câu hỏi 1: Em chưa biết code thì có thể tham gia vào CLB không ạ?",
+		question: "Câu 1: Em chưa biết code thì có thể tham gia vào CLB không ạ?",
 		answer: "Vào vô tư lun em ơi! Có rất nhiều bạn khi mới bắt đầu tham gia vào CLB cũng chưa được học về lập trình, nhưng sau khi hoàn thành khóa training của CLB, các bạn ấy đã bắt đầu thành thạo hơn các kỹ năng lập trình và có kiến thức để tham gia vào các cuộc thi về Công nghệ thông tin."
 	},
 	{
-		question: "Câu hỏi 2: Em mong muốn vào ban Chuyên môn để được training thì cho em hỏi Ban Giáo dục sẽ chỉ là người đào tạo thôi ah, vì em thấy không có ban Chuyên môn ạ.",
+		question: "Câu 2: Em mong muốn vào ban Chuyên môn để được training thì cho em hỏi Ban Giáo dục sẽ chỉ là người đào tạo thôi ah, vì em thấy không có ban Chuyên môn ạ.",
 		answer: "Không có ban chuyên môn em nhé, Nếu em đăng ký vào ban giáo dục, em sẽ không phải đi đào tạo ngay. Em sẽ được tham gia vào khoá học DSA của gen 8, sau khi học xong thì các em mới chính thức đi đào tạo nhé!"
 	},
 	{
-		question: "Câu hỏi 3: Khi em vào clb thì bao giờ sẽ được training về AI ạ?",
+		question: "Câu 3: Khi em vào clb thì bao giờ sẽ được training về AI ạ?",
 		answer: "Khi em chính thức là trở thành thành viên của CLB, thì chỉ sau tầm 1-2 tuần thôi là các em sẽ được tham gia vào các buổi training của CLB. Đợt training đầu tiên của em sẽ là về DSA. Nếu em chứng minh mình đủ khả năng, em có thể học cùng khoá AI với các bạn gen 7."
 	},
 	{
@@ -28,8 +28,10 @@ function FAQ() {
 		<div className="faq-container">
 			{faqs.map((faq, index) => (
 				<div key={index} className="faq-item mb-8">
-					<h3 className="text-xl font-semibold mb-2">{faq.question}</h3>
-					<p className="text-gray-50 whitespace-pre-line">{faq.answer}</p>
+					<details>
+						<summary><span className="text-xl font-semibold mb-2">{faq.question}</span></summary>
+						<p className="text-gray-50 whitespace-pre-line">{faq.answer}</p>
+					</details>
 				</div>
 			))}
 		</div>
