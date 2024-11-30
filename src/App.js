@@ -7,17 +7,23 @@ import Footer from './components/Footer';
 import './App.css';
 import ContentContainer from './components/ContentContainer';
 import HumansOfEgg from './components/humanOfEgg/HumansOfEgg';
+import BackToTop from './components/BackToTop';
+
+const headerSize = 56;
+const paddingContent = 32;
 
 const scrollToRef = function(ref){
-	console.log(ref);
 	if (ref && ref.current){
-		return ref.current.scrollIntoView({
+		return window.scrollTo({
+			top: ref.current.offsetTop - headerSize - paddingContent,
 			behavior: "smooth",
 		});
 	}
 	
-	return window.scrollTo(0, 0, {
+	return window.scrollTo({
+		top: 0,
 		behavior: "smooth",
+		scrollPaddingTop: headerSize + paddingContent
 	});
 }
 
@@ -52,6 +58,7 @@ function App() {
 				</ContentContainer>
 			</main>
 			<Footer />
+			<BackToTop scrollFunction={scrollToRef} />
 		</div>
 	);
 }
